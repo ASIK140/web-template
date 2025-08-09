@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Morgan - Interior Designer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__logo">
+                    <h2>Alex Morgan</h2>
+                    <span>Interior Designer</span>
+                </div>
+                
+                <nav class="nav" id="nav">
+                    <ul class="nav__list">
+                        <li><a href="#home" class="nav__link">Home</a></li>
+                        <li><a href="#about" class="nav__link">About</a></li>
+                        <li><a href="#services" class="nav__link">Services</a></li>
+                        <li><a href="#portfolio" class="nav__link">Portfolio</a></li>
+                        <li><a href="#testimonials" class="nav__link">Testimonials</a></li>
+                        <li><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero__content">
+                <h1 class="hero__title">Transforming Spaces,<br>Creating Dreams</h1>
+                <p class="hero__subtitle">Award-winning interior designer specializing in elegant, functional spaces that reflect your unique personality and lifestyle.</p>
+                <div class="hero__buttons">
+                    <a href="#portfolio" class="btn btn--primary">View My Work</a>
+                    <a href="#contact" class="btn btn--outline">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about__content">
+                <div class="about__text">
+                    <h2 class="section-title">About Alex</h2>
+                    <p class="about__bio">With over 8 years of experience in transforming spaces, I specialize in creating elegant, functional interiors that reflect my clients' personalities and lifestyles.</p>
+                    <div class="about__expertise">
+                        <h3>Areas of Expertise</h3>
+                        <ul class="expertise-list">
+                            <li>Residential Design</li>
+                            <li>Commercial Spaces</li>
+                            <li>Space Planning</li>
+                            <li>Color Consultation</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about__image">
+                    <div class="about__image-placeholder"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title text-center">Services</h2>
+            <div class="services__grid">
+                <div class="service-card">
+                    <div class="service-card__icon">🏠</div>
+                    <h3>Interior Design</h3>
+                    <p>Complete interior design services from concept to completion</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__icon">📐</div>
+                    <h3>Space Planning</h3>
+                    <p>Optimize your space for functionality and flow</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__icon">🎨</div>
+                    <h3>Color Consultation</h3>
+                    <p>Expert color palette selection for your perfect ambiance</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__icon">🛋️</div>
+                    <h3>Furniture Selection</h3>
+                    <p>Curated furniture and decor that matches your style</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section-title text-center">Portfolio</h2>
+            
+            <div class="portfolio__filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="residential">Residential</button>
+                <button class="filter-btn" data-filter="commercial">Commercial</button>
+                <button class="filter-btn" data-filter="renovation">Renovation</button>
+            </div>
+            
+            <div class="portfolio__grid" id="portfolio-grid">
+                <div class="portfolio-item" data-category="residential">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600" alt="Modern Minimalist Living Room" loading="lazy">
+                    <div class="portfolio-item__overlay">
+                        <h3>Modern Minimalist Living Room</h3>
+                        <p>Clean lines and neutral tones create a serene living space</p>
+                        <button class="portfolio-item__view" data-image="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800" data-title="Modern Minimalist Living Room" data-description="Clean lines and neutral tones create a serene living space">View Project</button>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="commercial">
+                    <img src="https://images.unsplash.com/photo-1591088398332-8a7791972843?w=600" alt="Luxury Hotel Suite" loading="lazy">
+                    <div class="portfolio-item__overlay">
+                        <h3>Luxury Hotel Suite</h3>
+                        <p>Elegant hospitality design with premium finishes</p>
+                        <button class="portfolio-item__view" data-image="https://images.unsplash.com/photo-1591088398332-8a7791972843?w=800" data-title="Luxury Hotel Suite" data-description="Elegant hospitality design with premium finishes">View Project</button>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="renovation">
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600" alt="Kitchen Renovation" loading="lazy">
+                    <div class="portfolio-item__overlay">
+                        <h3>Kitchen Renovation</h3>
+                        <p>Complete kitchen transformation with modern appliances</p>
+                        <button class="portfolio-item__view" data-image="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800" data-title="Kitchen Renovation" data-description="Complete kitchen transformation with modern appliances">View Project</button>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="residential">
+                    <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=600" alt="Cozy Bedroom Design" loading="lazy">
+                    <div class="portfolio-item__overlay">
+                        <h3>Cozy Bedroom Design</h3>
+                        <p>Warm and inviting bedroom with thoughtful lighting</p>
+                        <button class="portfolio-item__view" data-image="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800" data-title="Cozy Bedroom Design" data-description="Warm and inviting bedroom with thoughtful lighting">View Project</button>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="commercial">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600" alt="Office Space Design" loading="lazy">
+                    <div class="portfolio-item__overlay">
+                        <h3>Office Space Design</h3>
+                        <p>Professional workspace that boosts productivity</p>
+                        <button class="portfolio-item__view" data-image="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800" data-title="Office Space Design" data-description="Professional workspace that boosts productivity">View Project</button>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="renovation">
+                    <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=600" alt="Bathroom Makeover" loading="lazy">
+                    <div class="portfolio-item__overlay">
+                        <h3>Bathroom Makeover</h3>
+                        <p>Spa-like bathroom with luxurious materials</p>
+                        <button class="portfolio-item__view" data-image="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=800" data-title="Bathroom Makeover" data-description="Spa-like bathroom with luxurious materials">View Project</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title text-center">What Clients Say</h2>
+            <div class="testimonials__grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <p>"Alex transformed our living space beyond our wildest dreams. The attention to detail and understanding of our needs was exceptional."</p>
+                    <div class="testimonial-card__author">— Sarah Johnson</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <p>"Professional, creative, and delivered on time. Our office renovation has significantly improved our team's productivity and morale."</p>
+                    <div class="testimonial-card__author">— Michael Chen</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <p>"Working with Alex was a pleasure. The design process was collaborative and the final result exceeded our expectations."</p>
+                    <div class="testimonial-card__author">— Emily Rodriguez</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title text-center">Get In Touch</h2>
+            <div class="contact__content">
+                <div class="contact__info">
+                    <h3>Let's Discuss Your Project</h3>
+                    <p>Ready to transform your space? I'd love to hear about your vision and discuss how we can bring it to life.</p>
+                    
+                    <div class="contact__details">
+                        <div class="contact__item">
+                            <strong>Phone:</strong> +1 (555) 123-4567
+                        </div>
+                        <div class="contact__item">
+                            <strong>Email:</strong> hello@alexmorgan.design
+                        </div>
+                        <div class="contact__item">
+                            <strong>Address:</strong> 123 Design Street, Creative City, CC 12345
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact__form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name *</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                        <div class="error-message" id="name-error"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email *</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                        <div class="error-message" id="email-error"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="project-type" class="form-label">Project Type</label>
+                        <select id="project-type" name="project-type" class="form-control">
+                            <option value="">Select a project type</option>
+                            <option value="residential">Residential</option>
+                            <option value="commercial">Commercial</option>
+                            <option value="renovation">Renovation</option>
+                            <option value="consultation">Consultation</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message *</label>
+                        <textarea id="message" name="message" rows="5" class="form-control" placeholder="Tell me about your project..." required></textarea>
+                        <div class="error-message" id="message-error"></div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
+                    
+                    <div class="form-success" id="form-success">
+                        Thank you! Your message has been sent successfully.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <h3>Alex Morgan</h3>
+                    <p>Transforming spaces, creating dreams</p>
+                </div>
+                
+                <div class="footer__social">
+                    <h4>Follow Me</h4>
+                    <div class="social-links">
+                        <a href="https://instagram.com/alexmorgan.design" target="_blank" rel="noopener">Instagram</a>
+                        <a href="https://pinterest.com/alexmorgandesign" target="_blank" rel="noopener">Pinterest</a>
+                        <a href="https://linkedin.com/in/alex-morgan-interior-design" target="_blank" rel="noopener">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2025 Alex Morgan Interior Design. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox hidden" id="lightbox">
+        <div class="lightbox__backdrop" id="lightbox-backdrop"></div>
+        <div class="lightbox__content">
+            <button class="lightbox__close" id="lightbox-close">&times;</button>
+            <img class="lightbox__image" id="lightbox-image" src="" alt="">
+            <div class="lightbox__info">
+                <h3 class="lightbox__title" id="lightbox-title"></h3>
+                <p class="lightbox__description" id="lightbox-description"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

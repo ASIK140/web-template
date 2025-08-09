@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Morgan - Interior Designer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar__brand">
+            <span class="brand-text">AM</span>
+        </div>
+        
+        <div class="sidebar__menu">
+            <a href="#home" class="sidebar__link active" data-tooltip="Home">
+                <i class="fas fa-home"></i>
+                <span class="link-text">Home</span>
+            </a>
+            <a href="#about" class="sidebar__link" data-tooltip="About">
+                <i class="fas fa-user"></i>
+                <span class="link-text">About</span>
+            </a>
+            <a href="#services" class="sidebar__link" data-tooltip="Services">
+                <i class="fas fa-briefcase"></i>
+                <span class="link-text">Services</span>
+            </a>
+            <a href="#portfolio" class="sidebar__link" data-tooltip="Portfolio">
+                <i class="fas fa-th-large"></i>
+                <span class="link-text">Portfolio</span>
+            </a>
+            <a href="#testimonials" class="sidebar__link" data-tooltip="Testimonials">
+                <i class="fas fa-quote-left"></i>
+                <span class="link-text">Testimonials</span>
+            </a>
+            <a href="#contact" class="sidebar__link" data-tooltip="Contact">
+                <i class="fas fa-envelope"></i>
+                <span class="link-text">Contact</span>
+            </a>
+        </div>
+        
+        <button class="sidebar__toggle" id="sidebarToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero__background">
+                <div class="hero__overlay"></div>
+            </div>
+            <div class="hero__content">
+                <h1 class="hero__title">Award-winning designer crafting luxurious, atmospheric interiors</h1>
+                <p class="hero__subtitle">Alex Morgan</p>
+                <p class="hero__description">Informed by texture and light</p>
+                <div class="hero__cta">
+                    <a href="#portfolio" class="btn btn--gold">Explore Portfolio</a>
+                    <a href="#contact" class="btn btn--outline">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero__scroll">
+                <span>Scroll Down</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="about__content">
+                    <div class="about__text">
+                        <span class="section-label">About Alex</span>
+                        <h2 class="section-title">Award-winning designer crafting luxurious, atmospheric interiors informed by texture and light.</h2>
+                        
+                        <div class="about__expertise">
+                            <h3>Areas of Expertise</h3>
+                            <div class="expertise-grid">
+                                <div class="expertise-item">Luxury Residential</div>
+                                <div class="expertise-item">Boutique Hospitality</div>
+                                <div class="expertise-item">Space Planning</div>
+                                <div class="expertise-item">Material Selection</div>
+                            </div>
+                        </div>
+                        
+                        <div class="about__contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+1 (555) 987-6543</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>studio@alexmorgan.design</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about__image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-user-tie"></i>
+                            <p>Professional Portrait</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <div class="container">
+                <span class="section-label">Services</span>
+                <h2 class="section-title">Transformative Design Solutions</h2>
+                
+                <div class="services__scroll">
+                    <div class="services__container" id="servicesContainer">
+                        <div class="service-card">
+                            <div class="service-card__icon">🏰</div>
+                            <h3>Luxury Design</h3>
+                            <p>Bespoke solutions for high-end residences</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-card__icon">🏨</div>
+                            <h3>Hospitality Concepts</h3>
+                            <p>Transformative experiences for boutique hotels</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-card__icon">🛠️</div>
+                            <h3>Renovations</h3>
+                            <p>Full-scale renovations blending old & new</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-card__icon">🖼️</div>
+                            <h3>Art Curation</h3>
+                            <p>Sourcing & integrating statement art pieces</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section class="portfolio" id="portfolio">
+            <div class="container">
+                <span class="section-label">Portfolio</span>
+                <h2 class="section-title">Featured Projects</h2>
+                
+                <div class="portfolio__filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="Residential">Residential</button>
+                    <button class="filter-btn" data-filter="Commercial">Commercial</button>
+                    <button class="filter-btn" data-filter="Renovation">Renovation</button>
+                </div>
+                
+                <div class="portfolio__masonry" id="portfolioMasonry">
+                    <div class="portfolio-item" data-category="Residential">
+                        <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800" alt="Penthouse Noir" loading="lazy">
+                        <div class="portfolio-item__overlay">
+                            <h3>Penthouse Noir</h3>
+                            <p>Sleek monochrome penthouse with brass details</p>
+                            <span class="portfolio-item__category">Residential</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="Commercial">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161f50110?w=800" alt="Emerald Lounge" loading="lazy">
+                        <div class="portfolio-item__overlay">
+                            <h3>Emerald Lounge</h3>
+                            <p>Lounge bar bathed in emerald & gold</p>
+                            <span class="portfolio-item__category">Commercial</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="Renovation">
+                        <img src="https://images.unsplash.com/photo-1550583724-b2698071dde6?w=800" alt="Heritage Revival" loading="lazy">
+                        <div class="portfolio-item__overlay">
+                            <h3>Heritage Revival</h3>
+                            <p>Restored townhouse with modern accents</p>
+                            <span class="portfolio-item__category">Renovation</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="Residential">
+                        <img src="https://images.unsplash.com/photo-1600585154154-7160eae6932f?w=800" alt="Minimalist Haven" loading="lazy">
+                        <div class="portfolio-item__overlay">
+                            <h3>Minimalist Haven</h3>
+                            <p>Calming textures and muted palette</p>
+                            <span class="portfolio-item__category">Residential</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials" id="testimonials">
+            <div class="container">
+                <span class="section-label">Testimonials</span>
+                <h2 class="section-title">What Clients Say</h2>
+                
+                <div class="testimonials__slider" id="testimonialsSlider">
+                    <div class="testimonial-slide active">
+                        <div class="testimonial-content">
+                            <div class="testimonial__stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <blockquote>"Alex delivered a stunning transformation that balanced drama with comfort."</blockquote>
+                            <cite>— James Lee</cite>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="testimonial__stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <blockquote>"The boutique hotel now feels truly iconic thanks to Alex's vision."</blockquote>
+                            <cite>— Victoria Brown</cite>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="testimonial__stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <blockquote>"Professional and detail-oriented from start to finish."</blockquote>
+                            <cite>— Daniel Carter</cite>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonials__controls">
+                    <button class="slider-btn" id="prevBtn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="slider-dots" id="sliderDots">
+                        <span class="dot active" data-slide="0"></span>
+                        <span class="dot" data-slide="1"></span>
+                        <span class="dot" data-slide="2"></span>
+                    </div>
+                    <button class="slider-btn" id="nextBtn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <span class="section-label">Contact</span>
+                <h2 class="section-title">Let's Discuss Your Project</h2>
+                
+                <div class="contact__content">
+                    <div class="contact__map">
+                        <div class="map-placeholder">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>Studio Location</h3>
+                            <p>789 Lux Avenue<br>Design City, DC 67890</p>
+                            <div class="map-overlay">
+                                <div class="location-pin"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact__form-container">
+                        <div class="contact__info">
+                            <h3>Studio Information</h3>
+                            <div class="info-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+1 (555) 987-6543</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>studio@alexmorgan.design</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>789 Lux Avenue, Design City, DC 67890</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fab fa-instagram"></i>
+                                <span>@alexmorgan.design</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fab fa-linkedin"></i>
+                                <span>alex-morgan-design</span>
+                            </div>
+                        </div>
+                        
+                        <form class="contact__form" id="contactForm">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" class="form-input" placeholder=" " required>
+                                <label for="name" class="form-label">Name *</label>
+                                <div class="error-message" id="name-error"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" class="form-input" placeholder=" " required>
+                                <label for="email" class="form-label">Email *</label>
+                                <div class="error-message" id="email-error"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <select id="projectType" name="projectType" class="form-input">
+                                    <option value="" disabled selected>Select Project Type</option>
+                                    <option value="luxury">Luxury Design</option>
+                                    <option value="hospitality">Hospitality Concepts</option>
+                                    <option value="renovation">Renovations</option>
+                                    <option value="curation">Art Curation</option>
+                                </select>
+                                <label for="projectType" class="form-label select-label">Project Type</label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <textarea id="message" name="message" class="form-input" rows="5" placeholder=" " required></textarea>
+                                <label for="message" class="form-label">Message *</label>
+                                <div class="error-message" id="message-error"></div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn--gold btn--full-width">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                            
+                            <div class="form-success" id="formSuccess">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Thank you! Your message has been sent successfully.</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
