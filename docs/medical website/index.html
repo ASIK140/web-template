@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediCare - Your Health, Our Priority</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      .hero-bg {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url(./images/img.png);
+      }
+      .cta-bg {
+        background-image: linear-gradient(
+          rgba(22, 163, 228, 0.9),
+          rgba(13, 148, 136, 0.9)
+        );
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-slate-800">
+    <header
+      id="header"
+      class="bg-white/80 backdrop-blur-sm fixed top-0 left-0 w-full z-50 shadow-sm transition-all duration-300"
+    >
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a
+          href="#home"
+          class="text-2xl font-bold text-sky-600 flex items-center"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-7 w-7 mr-2 text-teal-500"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          MediCare
+        </a>
+        <nav class="hidden md:flex items-center space-x-8">
+          <a
+            href="#home"
+            class="text-slate-600 hover:text-sky-600 transition-colors"
+            >Home</a
+          >
+          <a
+            href="order.html"
+            class="text-slate-600 hover:text-sky-600 transition-colors font-semibold text-sky-700"
+            >Order Medicine</a
+          >
+          <a
+            href="#doctors"
+            class="text-slate-600 hover:text-sky-600 transition-colors"
+            >Doctors</a
+          >
+          <a
+            href="#tests"
+            class="text-slate-600 hover:text-sky-600 transition-colors"
+            >Medical Tests</a
+          >
+          <a
+            href="#contact"
+            class="text-slate-600 hover:text-sky-600 transition-colors"
+            >Contact Us</a
+          >
+        </nav>
+        <button
+          class="open-modal-btn hidden md:inline-block bg-sky-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-sky-700 transition-transform transform hover:scale-105"
+        >
+          Book an Appointment
+        </button>
+        <button id="mobile-menu-btn" class="md:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white border-t border-slate-200"
+      >
+        <a href="#home" class="block py-3 px-6 text-slate-600 hover:bg-slate-50"
+          >Home</a
+        >
+        <a
+          href="order.html"
+          class="block py-3 px-6 text-sky-700 font-semibold hover:bg-slate-50"
+          >Order Medicine</a
+        >
+        <a
+          href="#doctors"
+          class="block py-3 px-6 text-slate-600 hover:bg-slate-50"
+          >Doctors</a
+        >
+        <a
+          href="#tests"
+          class="block py-3 px-6 text-slate-600 hover:bg-slate-50"
+          >Medical Tests</a
+        >
+        <a
+          href="#contact"
+          class="block py-3 px-6 text-slate-600 hover:bg-slate-50"
+          >Contact Us</a
+        >
+        <div class="px-6 py-4">
+          <button
+            class="open-modal-btn w-full bg-sky-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-sky-700"
+          >
+            Book an Appointment
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section
+        id="home"
+        class="h-screen flex items-center justify-start hero-bg bg-cover bg-center bg-no-repeat"
+      >
+        <div class="text-left text-white px-6 md:pl-12 lg:pl-24">
+          <h1
+            class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight"
+            data-aos="fade-right"
+          >
+            Your Health, Our Priority.
+          </h1>
+          <p
+            class="mt-4 text-lg md:text-xl max-w-xl text-slate-200"
+            data-aos="fade-right"
+            data-aos-delay="200"
+          >
+            Providing comprehensive medical services with compassionate care.
+            From expert consultations to precise diagnostics, we are here for
+            you.
+          </p>
+          <button
+            class="open-modal-btn mt-8 bg-teal-500 text-white px-8 py-3 rounded-full text-lg font-bold hover:bg-teal-600 transition-transform transform hover:scale-105 shadow-lg"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            Book an Appointment
+          </button>
+        </div>
+      </section>
+
+      <section id="doctors" class="py-24 bg-slate-50">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold text-sky-800">
+              Our Specialists & Services
+            </h2>
+            <p class="mt-2 text-slate-600 max-w-2xl mx-auto">
+              Access a wide range of medical expertise and diagnostic tests all
+              in one place.
+            </p>
+          </div>
+
+          <h3
+            class="text-2xl font-semibold text-slate-700 mb-8"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            Meet Our Doctors
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div
+              class="bg-white p-6 rounded-xl shadow-md text-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2070&auto=format&fit=crop&w=200&h=200"
+                alt="Dr. Evelyn Reed"
+                class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-slate-100"
+              />
+              <h4 class="mt-4 text-xl font-bold text-slate-800">
+                Dr. Evelyn Reed
+              </h4>
+              <p class="text-teal-600 font-medium">Cardiologist</p>
+            </div>
+            <div
+              class="bg-white p-6 rounded-xl shadow-md text-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1622253692010-33352f9012d5?q=80&w=2070&auto=format&fit=crop&w=200&h=200"
+                alt="Dr. Ben Carter"
+                class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-slate-100"
+              />
+              <h4 class="mt-4 text-xl font-bold text-slate-800">
+                Dr. Ben Carter
+              </h4>
+              <p class="text-teal-600 font-medium">Dermatologist</p>
+            </div>
+            <div
+              class="bg-white p-6 rounded-xl shadow-md text-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=2070&auto=format&fit=crop&w=200&h=200"
+                alt="Dr. Olivia Chen"
+                class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-slate-100"
+              />
+              <h4 class="mt-4 text-xl font-bold text-slate-800">
+                Dr. Olivia Chen
+              </h4>
+              <p class="text-teal-600 font-medium">Pediatrician</p>
+            </div>
+            <div
+              class="bg-white p-6 rounded-xl shadow-md text-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?q=80&w=2070&auto=format&fit=crop&w=200&h=200"
+                alt="Dr. Marcus Bell"
+                class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-slate-100"
+              />
+              <h4 class="mt-4 text-xl font-bold text-slate-800">
+                Dr. Marcus Bell
+              </h4>
+              <p class="text-teal-600 font-medium">Neurologist</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tests" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+          <h3
+            class="text-2xl font-semibold text-slate-700 mb-8 text-center"
+            data-aos="fade-up"
+          >
+            Available Medical Tests
+          </h3>
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12"
+          >
+            <div
+              class="bg-slate-50 p-8 rounded-lg border border-slate-200 hover:border-sky-300 hover:shadow-sm transition-all duration-300"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <h4 class="text-xl font-bold text-sky-800">
+                Complete Blood Count (CBC)
+              </h4>
+              <p class="mt-2 text-slate-600">
+                A comprehensive test to evaluate your overall health and detect
+                a wide range of disorders.
+              </p>
+            </div>
+            <div
+              class="bg-slate-50 p-8 rounded-lg border border-slate-200 hover:border-sky-300 hover:shadow-sm transition-all duration-300"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <h4 class="text-xl font-bold text-sky-800">Lipid Panel</h4>
+              <p class="mt-2 text-slate-600">
+                Measures cholesterol and other fats in your blood to assess
+                cardiovascular risk.
+              </p>
+            </div>
+            <div
+              class="bg-slate-50 p-8 rounded-lg border border-slate-200 hover:border-sky-300 hover:shadow-sm transition-all duration-300"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+            >
+              <h4 class="text-xl font-bold text-sky-800">
+                Electrocardiogram (ECG)
+              </h4>
+              <p class="mt-2 text-slate-600">
+                Records the electrical signal from the heart to check for
+                different heart conditions.
+              </p>
+            </div>
+            <div
+              class="bg-slate-50 p-8 rounded-lg border border-slate-200 hover:border-sky-300 hover:shadow-sm transition-all duration-300"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <h4 class="text-xl font-bold text-sky-800">
+                Thyroid Function Test
+              </h4>
+              <p class="mt-2 text-slate-600">
+                Checks how well your thyroid gland is working by measuring
+                hormone levels.
+              </p>
+            </div>
+            <div
+              class="bg-slate-50 p-8 rounded-lg border border-slate-200 hover:border-sky-300 hover:shadow-sm transition-all duration-300"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <h4 class="text-xl font-bold text-sky-800">Urinalysis</h4>
+              <p class="mt-2 text-slate-600">
+                A test of your urine used to detect and manage a wide range of
+                medical disorders.
+              </p>
+            </div>
+            <div
+              class="bg-slate-50 p-8 rounded-lg border border-slate-200 hover:border-sky-300 hover:shadow-sm transition-all duration-300"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+            >
+              <h4 class="text-xl font-bold text-sky-800">Blood Sugar Test</h4>
+              <p class="mt-2 text-slate-600">
+                Measures the amount of glucose in your blood, crucial for
+                diabetes monitoring.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="order-cta" class="py-24 cta-bg">
+        <div
+          class="container mx-auto px-6 text-center text-white"
+          data-aos="zoom-in-up"
+        >
+          <h2 class="text-3xl md:text-4xl font-bold">
+            Get Medicines Delivered to Your Doorstep
+          </h2>
+          <p class="mt-4 max-w-2xl mx-auto text-slate-100">
+            Fast, reliable, and convenient. Browse our wide range of authentic
+            medicines and healthcare products.
+          </p>
+          <a
+            href="order.html"
+            class="mt-8 inline-block bg-white text-teal-600 px-8 py-3 rounded-full text-lg font-bold hover:bg-slate-100 transition-transform transform hover:scale-105 shadow-lg"
+          >
+            Order Now
+          </a>
+        </div>
+      </section>
+      <section id="about-us" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+              <img
+                src="./images/about.png"
+                alt="Modern medical facility with advanced equipment"
+                class="rounded-lg shadow-2xl w-full h-auto object-cover"
+              />
+            </div>
+
+            <div data-aos="fade-left" data-aos-delay="200">
+              <h2
+                class="text-3xl md:text-4xl font-bold text-sky-800 leading-tight"
+              >
+                Committed to Your Health, Close to Your Home.
+              </h2>
+              <p class="mt-4 text-slate-600 text-lg">
+                Welcome to MediCare, where we blend the latest advancements in
+                medical technology with a timeless commitment to patient-centric
+                care. Our facility is home to a distinguished team of medical
+                specialists and is equipped with state-of-the-art diagnostic
+                technology to ensure precise and prompt results.
+              </p>
+              <p class="mt-4 text-slate-600">
+                We are dedicated to upholding the highest standards of clinical
+                excellence. Our goal is to leverage innovation to provide you
+                with a healthcare experience that is not only effective but also
+                comfortable and convenient, because we believe modern medicine
+                should always be delivered with a human touch.
+              </p>
+              <a
+                href="#"
+                class="mt-8 inline-block bg-teal-500 text-white px-8 py-3 rounded-full font-bold hover:bg-teal-600 transition-transform transform hover:scale-105 shadow-lg"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="py-24 bg-slate-50">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold text-sky-800">
+              Get In Touch
+            </h2>
+            <p class="mt-2 text-slate-600 max-w-2xl mx-auto">
+              Have questions? We'd love to hear from you. Send us a message or
+              give us a call.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div
+              class="bg-white p-8 rounded-lg shadow-lg"
+              data-aos="fade-right"
+              data-aos-delay="200"
+            >
+              <h3 class="text-2xl font-bold text-slate-800 mb-6">
+                Send a Message
+              </h3>
+              <form action="#" method="POST" class="space-y-6">
+                <div>
+                  <label for="contact-name" class="sr-only">Name</label>
+                  <input
+                    type="text"
+                    id="contact-name"
+                    name="name"
+                    placeholder="Your Name"
+                    required
+                    class="w-full px-4 py-3 border border-slate-300 rounded-md focus:ring-sky-500 focus:border-sky-500"
+                  />
+                </div>
+                <div>
+                  <label for="contact-email" class="sr-only">Email</label>
+                  <input
+                    type="email"
+                    id="contact-email"
+                    name="email"
+                    placeholder="Your Email"
+                    required
+                    class="w-full px-4 py-3 border border-slate-300 rounded-md focus:ring-sky-500 focus:border-sky-500"
+                  />
+                </div>
+                <div>
+                  <label for="message" class="sr-only">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Your Message"
+                    required
+                    class="w-full px-4 py-3 border border-slate-300 rounded-md focus:ring-sky-500 focus:border-sky-500"
+                  ></textarea>
+                </div>
+                <div>
+                  <button
+                    type="submit"
+                    class="w-full bg-sky-600 text-white py-3 px-6 rounded-md font-semibold text-lg hover:bg-sky-700 transition-colors"
+                  >
+                    Send Message
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div data-aos="fade-left" data-aos-delay="300">
+              <h3 class="text-2xl font-bold text-slate-800 mb-6">
+                Contact Information
+              </h3>
+              <ul class="space-y-6 text-slate-600">
+                <li class="flex items-start">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 mr-4 text-teal-500 shrink-0 mt-1"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <div>
+                    <h4 class="font-bold text-slate-800">Our Address</h4>
+                    <p>123 Health St, Wellness City, 45678, India</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 mr-4 text-teal-500 shrink-0 mt-1"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M2.003 5.884L10 2.006l7.997 3.878A2 2 0 0118 7.616V16a2 2 0 01-2 2H4a2 2 0 01-2-2V7.616a2 2 0 01.003-1.732zM10 4.167L4.02 7.027v8.916l5.98-2.914V4.167zM15.98 7.027L10 9.943v6.009l5.98-2.914V7.027z"
+                    />
+                  </svg>
+                  <div>
+                    <h4 class="font-bold text-slate-800">Email Us</h4>
+                    <p>contact@medicare.com</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 mr-4 text-teal-500 shrink-0 mt-1"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+                    />
+                  </svg>
+                  <div>
+                    <h4 class="font-bold text-slate-800">Call Us</h4>
+                    <p>+91 123 456 7890</p>
+                  </div>
+                </li>
+              </ul>
+              <a
+                href="tel:+911234567890"
+                class="mt-8 inline-block w-full text-center bg-teal-500 text-white py-3 px-6 rounded-md font-semibold text-lg hover:bg-teal-600 transition-colors"
+              >
+                Call to Book Appointment
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="w-full">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224345.83923192454!2d77.0688996966113!3d28.52728034221133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1662556976865!5m2!1sen!2sin"
+          width="100%"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
+    </main>
+
+    <footer id="contact" class="bg-slate-800 text-white pt-16 pb-8">
+      <div class="container mx-auto px-6" data-aos="fade-up">
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left"
+        >
+          <div>
+            <h4 class="text-xl font-bold mb-4">MediCare</h4>
+            <p class="text-slate-400">
+              Your trusted partner in health and wellness. We provide quality
+              medical services and products.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-xl font-bold mb-4">Contact Us</h4>
+            <ul class="space-y-2 text-slate-400">
+              <li class="flex items-center justify-center md:justify-start">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 mr-2 text-teal-400"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                123 Health St, Wellness City, 45678
+              </li>
+              <li class="flex items-center justify-center md:justify-start">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 mr-2 text-teal-400"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+                  />
+                </svg>
+                +91 123 456 7890
+              </li>
+              <li class="flex items-center justify-center md:justify-start">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 mr-2 text-teal-400"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M2.003 5.884L10 2.006l7.997 3.878A2 2 0 0118 7.616V16a2 2 0 01-2 2H4a2 2 0 01-2-2V7.616a2 2 0 01.003-1.732zM10 4.167L4.02 7.027v8.916l5.98-2.914V4.167zM15.98 7.027L10 9.943v6.009l5.98-2.914V7.027z"
+                  />
+                </svg>
+                contact@medicare.com
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-xl font-bold mb-4">Follow Us</h4>
+            <div class="flex justify-center md:justify-start space-x-4">
+              <a href="#" class="text-slate-400 hover:text-white"
+                ><svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                    clip-rule="evenodd"
+                  ></path></svg
+              ></a>
+              <a href="#" class="text-slate-400 hover:text-white"
+                ><svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+                  ></path></svg
+              ></a>
+              <a href="#" class="text-slate-400 hover:text-white"
+                ><svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.345 2.525c.636-.247 1.363-.416 2.427-.465C9.793 2.013 10.147 2 12.315 2h.001zm-1.04 2.74a4.97 4.97 0 01-2.829 2.829 4.97 4.97 0 01-2.829-2.829A4.97 4.97 0 015.617 2.06a4.97 4.97 0 012.829 2.829z"
+                    clip-rule="evenodd"
+                  ></path>
+                  <path
+                    d="M12 6.848a5.152 5.152 0 110 10.304 5.152 5.152 0 010-10.304zM12 15a3 3 0 100-6 3 3 0 000 6z"
+                  ></path></svg
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-12 border-t border-slate-700 pt-6 text-center text-slate-400 text-sm"
+        >
+          <p>&copy; 2025 MediCare. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      id="appointment-modal"
+      class="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4 transition-opacity duration-300 invisible opacity-0"
+    >
+      <div
+        id="modal-content"
+        class="bg-white p-8 rounded-xl shadow-2xl w-full max-w-lg relative transform transition-all duration-300 scale-95"
+      >
+        <button
+          id="close-modal-btn"
+          class="absolute top-4 right-4 text-slate-500 hover:text-slate-800"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+
+        <h2 class="text-2xl font-bold text-sky-800 mb-6">
+          Book an Appointment
+        </h2>
+
+        <div class="mb-6">
+          <label class="block text-sm font-medium text-slate-700 mb-2"
+            >I would like to book a:</label
+          >
+          <div class="flex bg-slate-100 p-1 rounded-lg">
+            <button
+              id="select-doctor-btn"
+              class="flex-1 py-2 px-4 rounded-md text-sm font-semibold transition-all"
+            >
+              Doctor Appointment
+            </button>
+            <button
+              id="select-test-btn"
+              class="flex-1 py-2 px-4 rounded-md text-sm font-semibold transition-all"
+            >
+              Medical Test
+            </button>
+          </div>
+        </div>
+
+        <form id="appointment-form">
+          <div class="space-y-4">
+            <div>
+              <label for="name" class="block text-sm font-medium text-slate-700"
+                >Patient Name</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                class="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-sky-500 focus:border-sky-500"
+              />
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-medium text-slate-700"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-sky-500 focus:border-sky-500"
+                />
+              </div>
+              <div>
+                <label
+                  for="phone"
+                  class="block text-sm font-medium text-slate-700"
+                  >Phone Number</label
+                >
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  class="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-sky-500 focus:border-sky-500"
+                />
+              </div>
+            </div>
+
+            <div class="relative">
+              <div
+                id="doctor-fields"
+                class="transition-all duration-300 ease-in-out overflow-hidden"
+              >
+                <label
+                  for="doctor-select"
+                  class="block text-sm font-medium text-slate-700"
+                  >Select Doctor</label
+                >
+                <select
+                  id="doctor-select"
+                  name="doctor"
+                  class="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-sky-500 focus:border-sky-500"
+                >
+                  <option>Any Available</option>
+                  <option>Dr. Evelyn Reed (Cardiologist)</option>
+                  <option>Dr. Ben Carter (Dermatologist)</option>
+                  <option>Dr. Olivia Chen (Pediatrician)</option>
+                  <option>Dr. Marcus Bell (Neurologist)</option>
+                </select>
+              </div>
+              <div
+                id="test-fields"
+                class="transition-all duration-300 ease-in-out overflow-hidden"
+              >
+                <label
+                  for="test-select"
+                  class="block text-sm font-medium text-slate-700"
+                  >Select Medical Test</label
+                >
+                <select
+                  id="test-select"
+                  name="test"
+                  class="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-sky-500 focus:border-sky-500"
+                >
+                  <option>Complete Blood Count (CBC)</option>
+                  <option>Lipid Panel</option>
+                  <option>Electrocardiogram (ECG)</option>
+                  <option>Thyroid Function Test</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label
+                  for="date"
+                  class="block text-sm font-medium text-slate-700"
+                  >Preferred Date</label
+                >
+                <input
+                  type="date"
+                  id="date"
+                  name="date"
+                  required
+                  class="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-sky-500 focus:border-sky-500"
+                  min=""
+                />
+              </div>
+              <div>
+                <label
+                  for="time"
+                  class="block text-sm font-medium text-slate-700"
+                  >Preferred Time</label
+                >
+                <input
+                  type="time"
+                  id="time"
+                  name="time"
+                  required
+                  class="mt-1 block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-sky-500 focus:border-sky-500"
+                />
+              </div>
+            </div>
+            <div class="pt-4">
+              <button
+                type="submit"
+                class="w-full bg-teal-500 text-white py-3 px-4 border border-transparent rounded-md shadow-sm text-base font-medium hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500"
+              >
+                Confirm Appointment
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // --- ADDED: Initialize AOS ---
+        AOS.init({
+          duration: 800, // Animation duration
+          once: true, // Whether animation should happen only once
+        });
+
+        const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        mobileMenuBtn.addEventListener("click", () =>
+          mobileMenu.classList.toggle("hidden")
+        );
+
+        const header = document.getElementById("header");
+        window.addEventListener("scroll", () => {
+          header.classList.toggle("shadow-lg", window.scrollY > 50);
+        });
+
+        // --- UPDATED: Modal Logic for smooth fade transition ---
+        const modal = document.getElementById("appointment-modal");
+        const modalContent = document.getElementById("modal-content");
+        const openModalBtns = document.querySelectorAll(".open-modal-btn");
+        const closeModalBtn = document.getElementById("close-modal-btn");
+
+        const openModal = () => {
+          modal.classList.remove("invisible", "opacity-0");
+          modal.classList.add("visible", "opacity-100");
+          setTimeout(() => {
+            modalContent.classList.remove("scale-95");
+            modalContent.classList.add("scale-100");
+          }, 10);
+          updateFormView("doctor");
+        };
+
+        const closeModal = () => {
+          modalContent.classList.remove("scale-100");
+          modalContent.classList.add("scale-95");
+          setTimeout(() => {
+            modal.classList.remove("visible", "opacity-100");
+            modal.classList.add("invisible", "opacity-0");
+          }, 300);
+        };
+
+        openModalBtns.forEach((btn) =>
+          btn.addEventListener("click", openModal)
+        );
+        closeModalBtn.addEventListener("click", closeModal);
+        modal.addEventListener("click", (event) => {
+          if (event.target === modal) closeModal();
+        });
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") closeModal();
+        });
+
+        const dateInput = document.getElementById("date");
+        const today = new Date().toISOString().split("T")[0];
+        dateInput.setAttribute("min", today);
+
+        const selectDoctorBtn = document.getElementById("select-doctor-btn");
+        const selectTestBtn = document.getElementById("select-test-btn");
+        const doctorFields = document.getElementById("doctor-fields");
+        const testFields = document.getElementById("test-fields");
+        const doctorSelect = document.getElementById("doctor-select");
+        const testSelect = document.getElementById("test-select");
+
+        const updateFormView = (selection) => {
+          if (selection === "doctor") {
+            selectDoctorBtn.classList.add("bg-white", "text-sky-600", "shadow");
+            selectTestBtn.classList.remove(
+              "bg-white",
+              "text-sky-600",
+              "shadow"
+            );
+            doctorFields.style.maxHeight = "10rem";
+            doctorFields.style.opacity = "1";
+            testFields.style.maxHeight = "0";
+            testFields.style.opacity = "0";
+            doctorSelect.disabled = false;
+            testSelect.disabled = true;
+          } else {
+            selectTestBtn.classList.add("bg-white", "text-sky-600", "shadow");
+            selectDoctorBtn.classList.remove(
+              "bg-white",
+              "text-sky-600",
+              "shadow"
+            );
+            testFields.style.maxHeight = "10rem";
+            testFields.style.opacity = "1";
+            doctorFields.style.maxHeight = "0";
+            doctorFields.style.opacity = "0";
+            testSelect.disabled = false;
+            doctorSelect.disabled = true;
+          }
+        };
+
+        selectDoctorBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          updateFormView("doctor");
+        });
+        selectTestBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          updateFormView("test");
+        });
+
+        const appointmentForm = document.getElementById("appointment-form");
+        appointmentForm.addEventListener("submit", (event) => {
+          event.preventDefault();
+          const patientName = document.getElementById("name").value;
+          alert(
+            `Thank you, ${patientName}! Your appointment request has been received. We will contact you shortly to confirm.`
+          );
+          appointmentForm.reset();
+          closeModal();
+        });
+      });
+    </script>
+  </body>
+</html>

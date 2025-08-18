@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Medicine - MediCare</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50 text-slate-800">
+    <header
+      id="header"
+      class="bg-white/80 backdrop-blur-sm sticky top-0 left-0 w-full z-50 shadow-sm"
+    >
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a
+          href="index.html"
+          class="text-2xl font-bold text-sky-600 flex items-center"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-7 w-7 mr-2 text-teal-500"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          MediCare
+        </a>
+        <nav class="hidden md:flex items-center space-x-8">
+          <a
+            href="index.html#home"
+            class="text-slate-600 hover:text-sky-600 transition-colors"
+            >Home</a
+          >
+          <a href="order.html" class="font-semibold text-sky-700"
+            >Order Medicine</a
+          >
+          <a
+            href="index.html#doctors"
+            class="text-slate-600 hover:text-sky-600 transition-colors"
+            >Doctors</a
+          >
+          <a
+            href="index.html#contact"
+            class="text-slate-600 hover:text-sky-600 transition-colors"
+            >Contact Us</a
+          >
+        </nav>
+        <div class="hidden md:flex items-center space-x-4">
+          <a href="#" class="text-slate-600 hover:text-sky-600 p-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+              />
+            </svg>
+          </a>
+          <button
+            class="open-modal-btn bg-sky-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-sky-700 transition-transform transform hover:scale-105"
+          >
+            Book an Appointment
+          </button>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+      </div>
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white border-t border-slate-200"
+      ></div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-sky-800">
+          Order Medicines Online
+        </h1>
+        <p class="mt-2 text-slate-600">
+          Search for products or browse categories.
+        </p>
+      </div>
+
+      <div class="mb-12">
+        <div class="max-w-2xl mx-auto">
+          <div class="relative">
+            <input
+              type="search"
+              placeholder="Search for medicines, health products..."
+              class="w-full pl-5 pr-12 py-3 border border-slate-300 rounded-full shadow-sm focus:ring-sky-500 focus:border-sky-500"
+            />
+            <button
+              class="absolute inset-y-0 right-0 flex items-center justify-center w-12 h-full text-white bg-sky-600 rounded-r-full hover:bg-sky-700"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+      >
+        <div class="bg-white rounded-lg shadow-md overflow-hidden group">
+          <div class="p-4 bg-slate-100">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ76gV2d1pM8iHNYujtZHFY2u-o_8lYp7kK2A&s"
+              alt="Paracetamol"
+              class="w-full h-40 object-contain group-hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-bold text-slate-800">Paracetamol 500mg</h3>
+            <p class="text-sm text-slate-500 mb-3">10 Tablets</p>
+            <div class="flex justify-between items-center">
+              <p class="text-xl font-extrabold text-sky-700">₹25.00</p>
+              <button
+                data-product-name="Paracetamol 500mg"
+                class="add-to-cart-btn bg-teal-500 text-white px-4 py-2 rounded-full font-semibold text-sm hover:bg-teal-600 transition-colors"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md overflow-hidden group">
+          <div class="p-4 bg-slate-100">
+            <img
+              src="https://5.imimg.com/data5/SELLER/Default/2023/1/XX/XO/DA/36294745/antiseptic-liquid-500x500.jpg"
+              alt="Antiseptic Liquid"
+              class="w-full h-40 object-contain group-hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-bold text-slate-800">Antiseptic Liquid</h3>
+            <p class="text-sm text-slate-500 mb-3">250 ml Bottle</p>
+            <div class="flex justify-between items-center">
+              <p class="text-xl font-extrabold text-sky-700">₹150.00</p>
+              <button
+                data-product-name="Antiseptic Liquid"
+                class="add-to-cart-btn bg-teal-500 text-white px-4 py-2 rounded-full font-semibold text-sm hover:bg-teal-600 transition-colors"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md overflow-hidden group">
+          <div class="p-4 bg-slate-100">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhQ7qT4Q5d7eL2G7tJ7VwG3Z4w3h9X8Z_xQ&s"
+              alt="Vitamin C Tablets"
+              class="w-full h-40 object-contain group-hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-bold text-slate-800">Vitamin C Tablets</h3>
+            <p class="text-sm text-slate-500 mb-3">60 Tablets</p>
+            <div class="flex justify-between items-center">
+              <p class="text-xl font-extrabold text-sky-700">₹220.00</p>
+              <button
+                data-product-name="Vitamin C Tablets"
+                class="add-to-cart-btn bg-teal-500 text-white px-4 py-2 rounded-full font-semibold text-sm hover:bg-teal-600 transition-colors"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md overflow-hidden group">
+          <div class="p-4 bg-slate-100">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSJ0gQzLg_P-XpS8sFwT2kP9H-tGjXkY-4g&s"
+              alt="Cough Syrup"
+              class="w-full h-40 object-contain group-hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-bold text-slate-800">Cough Syrup</h3>
+            <p class="text-sm text-slate-500 mb-3">100 ml Bottle</p>
+            <div class="flex justify-between items-center">
+              <p class="text-xl font-extrabold text-sky-700">₹95.00</p>
+              <button
+                data-product-name="Cough Syrup"
+                class="add-to-cart-btn bg-teal-500 text-white px-4 py-2 rounded-full font-semibold text-sm hover:bg-teal-600 transition-colors"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // --- Mobile Menu ---
+        const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        mobileMenuBtn.addEventListener("click", () =>
+          mobileMenu.classList.toggle("hidden")
+        );
+
+        // --- "Add to Cart" Button Interaction ---
+        const cartButtons = document.querySelectorAll(".add-to-cart-btn");
+        cartButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const productName = button.dataset.productName;
+            const originalText = button.innerHTML;
+
+            button.innerHTML = "Added ✓";
+            button.classList.add("bg-green-500");
+            button.classList.remove("bg-teal-500");
+
+            setTimeout(() => {
+              button.innerHTML = originalText;
+              button.classList.remove("bg-green-500");
+              button.classList.add("bg-teal-500");
+            }, 2000); // Revert after 2 seconds
+          });
+        });
+
+        // The appointment modal script can also be added here if you want the button to work on this page
+      });
+    </script>
+  </body>
+</html>
